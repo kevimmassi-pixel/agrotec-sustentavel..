@@ -1,185 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kevim Massi - Futuro Limpo</title>
-
-<style>
-    * {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
-    html {scroll-behavior: smooth;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Projeto</title>
+  <style>
     body {
-        background: #e8f5e9;
-        color: #1b3b1b;
-        overflow-x: hidden;
-        position: relative;
-    }
-    header {
-        background: #1b5e20;
-        color: white;
-        text-align: center;
-        padding: 50px 20px;
-        position: relative;
-        z-index: 2;
-    }
-    header h1 {font-size:2.8rem; margin-bottom:10px;}
-    header p {font-size:1.2rem;}
-    nav {
-        display:flex;
-        justify-content:center;
-        gap:20px;
-        background:#2e7d32;
-        padding:15px;
-        position: sticky;
-        top:0;
-        z-index:2;
-    }
-    nav a {
-        color:white;
-        text-decoration:none;
-        font-weight:bold;
-        transition:0.3s;
-    }
-    nav a:hover {opacity:0.7;}
-    .banner {
-        width:100%;
-        max-height:400px;
-        object-fit:cover;
-        border-radius:10px;
-        margin-top:20px;
-    }
-    section {
-        max-width:900px;
-        margin:30px auto;
-        padding:25px;
-        background:white;
-        border-radius:10px;
-        box-shadow:0 0 15px rgba(0,0,0,0.1);
-        position:relative;
-        z-index:2;
-        transition: transform 0.3s;
-    }
-    section:hover {transform:translateY(-5px);}
-    h2 {color:#2e7d32; margin-bottom:15px;}
-    button {
-        background:#2e7d32;
-        color:white;
-        border:none;
-        padding:12px 25px;
-        border-radius:6px;
-        cursor:pointer;
-        transition:0.3s;
-        font-size:1rem;
-    }
-    button:hover {background:#1b5e20; transform:scale(1.05);}
-    .cards {display:flex; flex-wrap:wrap; gap:15px;}
-    .card {
-        flex:1;
-        min-width:200px;
-        background:#c8e6c9;
-        text-align:center;
-        padding:20px;
-        border-radius:10px;
-        transition: transform 0.3s;
-    }
-    .card:hover {transform:scale(1.05);}
-    footer {
-        text-align:center;
-        padding:20px;
-        background:#2e7d32;
-        color:white;
-        margin-top:20px;
-        position:relative;
-        z-index:2;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    /* EFEITO DE FOLHAS CAINDO */
-    .leaf {
-        position:absolute;
-        width:40px;
-        height:40px;
-        background: url('img/leaf.png') no-repeat center/contain;
-        top:-50px;
-        animation: fall linear infinite;
-        opacity:0.8;
-        z-index:1;
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
-    @keyframes fall {
-        0% {transform: translateY(0) rotate(0deg);}
-        100% {transform: translateY(120vh) rotate(360deg);}
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #4facfe;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
     }
-</style>
+
+    button:hover {
+      background: #0077ff;
+    }
+  </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-    <h1>🌱 Futuro Limpo</h1>
-    <p>Projeto de Kevim Massi para um planeta mais sustentável</p>
-</header>
+  <div class="container">
+    <h1>Olá, mundo!</h1>
+    <p id="texto">Clique no botão para mudar este texto.</p>
+    <button onclick="mudarTexto()">Clique aqui</button>
+  </div>
 
-<!-- BANNER -->
-<img src="img/banner-verde.png" alt="Banner Futuro Limpo" class="banner">
-
-<!-- NAV -->
-<nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#acao">Ação</a>
-    <a href="#impacto">Impacto</a>
-    <a href="#contato">Contato</a>
-</nav>
-
-<!-- SOBRE -->
-<section id="sobre">
-    <h2>Sobre Kevim Massi</h2>
-    <p>Eu sou Kevim Massi e acredito que pequenas atitudes podem transformar o mundo. O futuro sustentável depende das escolhas que fazemos hoje.</p>
-</section>
-
-<!-- AÇÃO -->
-<section id="acao">
-    <h2>Projeto Futuro Limpo</h2>
-    <p>Incentivamos reciclagem, economia de recursos e preservação da natureza.</p>
-    <button onclick="mostrarMensagem()">Quero participar</button>
-</section>
-
-<!-- IMPACTO -->
-<section id="impacto">
-    <h2>Impacto Ambiental</h2>
-    <div class="cards">
-        <div class="card">🌳 Preservação da natureza</div>
-        <div class="card">💧 Uso consciente da água</div>
-        <div class="card">♻️ Reciclagem de resíduos</div>
-    </div>
-</section>
-
-<!-- CONTATO -->
-<section id="contato">
-    <h2>Contato</h2>
-    <p>Email: kevim.massi@futurolimpo.org</p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>&copy; 2026 Kevim Massi - Futuro Limpo</p>
-</footer>
-
-<!-- JAVASCRIPT -->
-<script>
-    function mostrarMensagem() {
-        alert("Obrigado por apoiar o Futuro Limpo com Kevim Massi! 🌱");
+  <script>
+    function mudarTexto() {
+      const texto = document.getElementById("texto");
+      texto.innerHTML = "Texto alterado com JavaScript! 🚀";
     }
-
-    // CRIA FOLHAS CAINDO
-    const numberOfLeaves = 15; // quantidade de folhas
-    for(let i=0;i<numberOfLeaves;i++){
-        let leaf = document.createElement('div');
-        leaf.className='leaf';
-        leaf.style.left=Math.random()*100+'vw';
-        leaf.style.animationDuration= (5+Math.random()*5)+'s';
-        leaf.style.animationDelay= (Math.random()*5)+'s';
-        document.body.appendChild(leaf);
-    }
-</script>
-
+  </script>
+  
 </body>
 </html>
