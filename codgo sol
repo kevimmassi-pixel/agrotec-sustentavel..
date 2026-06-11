@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevim Massi - Futuro Limpo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #e8f5e9;
+            color: #1b3b1b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin-top: 10px;
+        }
+
+        nav {
+            background: #2e7d32;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .banner {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 25px;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+        }
+
+        h2 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            background: #2e7d32;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1b5e20;
+            transform: scale(1.05);
+        }
+
+        .cards {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            flex: 1;
+            background: #c8e6c9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 200px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2e7d32;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🌱 Futuro Limpo</h1>
+        <p>Projeto de Kevim Massi para um planeta mais sustentável</p>
+    </header>
+
+    <!-- BANNER (coloque sua imagem aqui) -->
+    <img src="img/banner-verde.png" alt="Banner Futuro Limpo" class="banner">
+
+    <!-- MENU -->
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#acao">Ação</a>
+        <a href="#impacto">Impacto</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <h2>Sobre Kevim Massi</h2>
+        <p>
+            Eu sou Kevim Massi e acredito que pequenas atitudes podem transformar o mundo.
+            O futuro sustentável depende das nossas escolhas de hoje.
+        </p>
+    </section>
+
+    <!-- AÇÃO -->
+    <section id="acao">
+        <h2>Projeto Futuro Limpo</h2>
+        <p>
+            Incentivamos reciclagem, economia de recursos e preservação da natureza.
+        </p>
+
+        <button onclick="mostrarMensagem()">Quero participar</button>
+    </section>
+
+    <!-- IMPACTO -->
+    <section id="impacto">
+        <h2>Impacto Ambiental</h2>
+
+        <div class="cards">
+            <div class="card">🌳 Preservação da natureza</div>
+            <div class="card">💧 Uso consciente da água</div>
+            <div class="card">♻️ Reciclagem de resíduos</div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Email: kevim.massi@futurolimpo.org</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Kevim Massi - Futuro Limpo</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function mostrarMensagem() {
+            alert("Obrigado por apoiar o Futuro Limpo com Kevim Massi! 🌱");
+        }
+    </script>
+
+</body>
+</html>
