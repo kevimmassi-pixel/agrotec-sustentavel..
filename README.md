@@ -1,2 +1,170 @@
 # agrotec-sustentavel..
 Projeto Agrinho 2026 - Agro forte, futuro sustentável.
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Moderno</title>
+  <style>
+    /* VARIÁVEIS DE CORES */
+    :root {
+      --bg: #f4f6f9;
+      --text: #222;
+      --primary: #4facfe;
+      --card: white;
+    }
+
+    .dark {
+      --bg: #121212;
+      --text: #f1f1f1;
+      --primary: #00c6ff;
+      --card: #1e1e1e;
+    }
+
+    /* RESET E BODY */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: var(--primary);
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .toggle {
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: white;
+      margin-top: 5px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background: var(--primary);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    /* CARDS */
+    .card {
+      background: var(--card);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ANIMAÇÕES */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Meu Portfólio</h1>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="toggle" onclick="toggleMode()">🌙</button>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Bem-vindo 👋</h2>
+    <p>Site moderno feito com HTML, CSS e JavaScript embutidos.</p>
+    <button onclick="mudarTexto()">Clique aqui</button>
+  </section>
+
+  <section id="sobre" class="card">
+    <h2>Sobre</h2>
+    <p id="texto">Esse projeto está todo dentro de um único arquivo HTML.</p>
+  </section>
+
+  <section id="contato" class="card">
+    <h2>Contato</h2>
+    <p>Email: exemplo@email.com</p>
+  </section>
+
+  <footer>
+    <p>Feito com ❤️ para o GitHub</p>
+  </footer>
+
+  <script>
+    function mudarTexto() {
+      document.getElementById("texto").innerHTML =
+        "Texto atualizado com JavaScript! 🚀";
+    }
+
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
